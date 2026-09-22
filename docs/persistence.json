@@ -1,0 +1,353 @@
+{
+  "passed": true,
+  "backend_restarted": true,
+  "postgres_container_restarted": true,
+  "before": {
+    "/api/assets/1/components": {
+      "items": [
+        {
+          "slot_id": 1,
+          "slot_name": "battery-main",
+          "allowed_type": "BATTERY",
+          "installation_id": 6,
+          "component_id": 3,
+          "serial_no": "B221",
+          "condition_status": "GOOD",
+          "batch_code": "BAT-2026-06",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-09-22T11:21:58.691208Z",
+          "removed_at": null
+        },
+        {
+          "slot_id": 2,
+          "slot_name": "camera-front",
+          "allowed_type": "CAMERA",
+          "installation_id": 3,
+          "component_id": 5,
+          "serial_no": "C004",
+          "condition_status": "GOOD",
+          "batch_code": "CAM-2026-01",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-03-01T00:00:00Z",
+          "removed_at": null
+        },
+        {
+          "slot_id": 3,
+          "slot_name": "motor-left",
+          "allowed_type": "MOTOR",
+          "installation_id": 4,
+          "component_id": 6,
+          "serial_no": "M031",
+          "condition_status": "GOOD",
+          "batch_code": "MOT-2026-01",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-03-01T00:00:00Z",
+          "removed_at": null
+        },
+        {
+          "slot_id": 4,
+          "slot_name": "motor-right",
+          "allowed_type": "MOTOR",
+          "installation_id": 5,
+          "component_id": 7,
+          "serial_no": "M033",
+          "condition_status": "GOOD",
+          "batch_code": "MOT-2026-01",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-03-01T00:00:00Z",
+          "removed_at": null
+        }
+      ],
+      "at": null,
+      "mode": "current"
+    },
+    "/api/components/1/history": {
+      "component": {
+        "id": 1,
+        "serial_no": "B102",
+        "batch_id": 1,
+        "condition_status": "GOOD",
+        "created_at": "2026-02-15T00:00:00Z",
+        "batch_code": null,
+        "recall_status": null,
+        "component_type": null,
+        "model_name": null,
+        "installation_id": null,
+        "asset_code": null,
+        "slot_name": null,
+        "manufactured_at": "2026-02-01",
+        "recalled_at": null,
+        "recall_reason": null,
+        "recalled_by": null
+      },
+      "items": [
+        {
+          "action": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "technician": "张晓 · Alice",
+          "note": "初始装配",
+          "id": 1,
+          "event_type": "INSTALL",
+          "asset_id": 1,
+          "asset_code": "D001",
+          "slot_name": "battery-main"
+        },
+        {
+          "action": "REMOVE",
+          "occurred_at": "2026-09-22T11:21:58.691208Z",
+          "technician": "张晓 · Alice",
+          "note": "",
+          "id": 6,
+          "event_type": "SWAP",
+          "asset_id": 1,
+          "asset_code": "D001",
+          "slot_name": "battery-main"
+        }
+      ]
+    },
+    "/api/dashboard": {
+      "counts": {
+        "assets": 3,
+        "components": 8,
+        "recalled_batches": 0,
+        "affected_assets": 0
+      },
+      "recent": [
+        {
+          "id": 6,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "SWAP",
+          "occurred_at": "2026-09-22T11:21:58.691208Z",
+          "note": "",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 5,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 4,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 3,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 2,
+          "asset_id": 3,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D014",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 1,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        }
+      ]
+    }
+  },
+  "after": {
+    "/api/assets/1/components": {
+      "items": [
+        {
+          "slot_id": 1,
+          "slot_name": "battery-main",
+          "allowed_type": "BATTERY",
+          "installation_id": 6,
+          "component_id": 3,
+          "serial_no": "B221",
+          "condition_status": "GOOD",
+          "batch_code": "BAT-2026-06",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-09-22T11:21:58.691208Z",
+          "removed_at": null
+        },
+        {
+          "slot_id": 2,
+          "slot_name": "camera-front",
+          "allowed_type": "CAMERA",
+          "installation_id": 3,
+          "component_id": 5,
+          "serial_no": "C004",
+          "condition_status": "GOOD",
+          "batch_code": "CAM-2026-01",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-03-01T00:00:00Z",
+          "removed_at": null
+        },
+        {
+          "slot_id": 3,
+          "slot_name": "motor-left",
+          "allowed_type": "MOTOR",
+          "installation_id": 4,
+          "component_id": 6,
+          "serial_no": "M031",
+          "condition_status": "GOOD",
+          "batch_code": "MOT-2026-01",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-03-01T00:00:00Z",
+          "removed_at": null
+        },
+        {
+          "slot_id": 4,
+          "slot_name": "motor-right",
+          "allowed_type": "MOTOR",
+          "installation_id": 5,
+          "component_id": 7,
+          "serial_no": "M033",
+          "condition_status": "GOOD",
+          "batch_code": "MOT-2026-01",
+          "recall_status": "NORMAL",
+          "installed_at": "2026-03-01T00:00:00Z",
+          "removed_at": null
+        }
+      ],
+      "at": null,
+      "mode": "current"
+    },
+    "/api/components/1/history": {
+      "component": {
+        "id": 1,
+        "serial_no": "B102",
+        "batch_id": 1,
+        "condition_status": "GOOD",
+        "created_at": "2026-02-15T00:00:00Z",
+        "batch_code": null,
+        "recall_status": null,
+        "component_type": null,
+        "model_name": null,
+        "installation_id": null,
+        "asset_code": null,
+        "slot_name": null,
+        "manufactured_at": "2026-02-01",
+        "recalled_at": null,
+        "recall_reason": null,
+        "recalled_by": null
+      },
+      "items": [
+        {
+          "action": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "technician": "张晓 · Alice",
+          "note": "初始装配",
+          "id": 1,
+          "event_type": "INSTALL",
+          "asset_id": 1,
+          "asset_code": "D001",
+          "slot_name": "battery-main"
+        },
+        {
+          "action": "REMOVE",
+          "occurred_at": "2026-09-22T11:21:58.691208Z",
+          "technician": "张晓 · Alice",
+          "note": "",
+          "id": 6,
+          "event_type": "SWAP",
+          "asset_id": 1,
+          "asset_code": "D001",
+          "slot_name": "battery-main"
+        }
+      ]
+    },
+    "/api/dashboard": {
+      "counts": {
+        "assets": 3,
+        "components": 8,
+        "recalled_batches": 0,
+        "affected_assets": 0
+      },
+      "recent": [
+        {
+          "id": 6,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "SWAP",
+          "occurred_at": "2026-09-22T11:21:58.691208Z",
+          "note": "",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 5,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 4,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 3,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 2,
+          "asset_id": 3,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D014",
+          "technician": "张晓 · Alice"
+        },
+        {
+          "id": 1,
+          "asset_id": 1,
+          "technician_id": 1,
+          "event_type": "INSTALL",
+          "occurred_at": "2026-03-01T00:00:00Z",
+          "note": "初始装配",
+          "asset_code": "D001",
+          "technician": "张晓 · Alice"
+        }
+      ]
+    }
+  }
+}

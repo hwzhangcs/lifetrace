@@ -1,0 +1,25 @@
+INFO:     Started server process [81716]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8012 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63045 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63048 - "POST /api/maintenance/swap HTTP/1.1" 201 Created
+INFO:     127.0.0.1:63050 - "GET /api/assets/1/components HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63052 - "GET /api/components/1/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63054 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81716]
+INFO:     Started server process [81732]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8012 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63065 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63068 - "GET /api/assets/1/components HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63070 - "GET /api/components/1/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63072 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81732]

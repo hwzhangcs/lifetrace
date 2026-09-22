@@ -1,0 +1,27 @@
+
+> lifetrace-web@1.0.0 test:e2e
+> playwright test
+
+[WebServer] INFO:     Started server process [96233]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)
+
+Running 6 tests using 1 worker
+
+(node:96242) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+  ✓  1 [chromium] › e2e/lifetrace.spec.ts:20:1 › 完整演示：更换、复用、召回与溯源 (2.0s)
+
+  ✓  2 [chromium] › e2e/lifetrace.spec.ts:95:1 › 登记、重复错误、对话框键盘交互 (886ms)
+
+  ✓  3 [chromium] › e2e/lifetrace.spec.ts:114:1 › 历史边界与历史模式维修保护 (769ms)
+
+  ✓  4 [chromium] › e2e/lifetrace.spec.ts:127:1 › 移动端和平板布局没有横向溢出 (2.2s)
+
+  ✓  5 [chromium] › e2e/lifetrace.spec.ts:155:1 › 已占用与缺陷部件显示禁用原因 (354ms)
+
+  ✓  6 [chromium] › e2e/lifetrace.spec.ts:170:1 › 首页真实组成图可以打开部件履历 (803ms)
+
+  6 passed (8.5s)
