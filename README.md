@@ -8,7 +8,7 @@
 
 ## 快速运行
 
-前提：Docker Desktop / Docker Engine 与 Compose 已运行。首次构建需要网络，构建完成后应用运行不依赖 AI、CDN 或外部服务。
+前提：Docker Desktop / Docker Engine 与 Compose 已运行。首次构建需要网络，构建完成后应用运行不依赖 CDN 或外部服务。
 
 ```bash
 docker compose up -d --build

@@ -16,9 +16,9 @@
 | 后端与数据库真实重启 | 通过 | [前后快照](persistence.json)、[后端日志](persistence-server.log) |
 | 10 万条历史性能测量 | 完成 | [原始 EXPLAIN ANALYZE](performance.json) |
 
-当前用例合计 **83 项通过**（后端 74 项沿用原验收；本次前端优化重新执行 3 项单元测试和 6 项浏览器测试），另完成 SQL 导入、容器部署、真实重启和性能检查。统一验收由 `scripts/verify.sh` 执行，不以手工浏览代替业务断言。
+当前用例合计 **83 项通过**（后端 74 项沿用原验收；本次前端优化重新执行 3 项单元测试和 6 项浏览器测试），另完成 SQL 导入、容器部署、真实重启和性能检查。统一验收入口为 `scripts/verify.sh`。
 
-pytest 有两条上游兼容性弃用提示（Starlette 的 HTTPX 客户端与 AnyIO 别名），本次无测试失败；未屏蔽提示。CI 配置已提交，但未连接远程仓库运行，不能把本地结果称为远程 CI 结果。
+pytest 有两条上游兼容性弃用提示（Starlette 的 HTTPX 客户端与 AnyIO 别名），测试全部通过。以上结果来自本地验收，远程 CI 状态以 GitHub Actions 运行记录为准。
 
 ## 2. 数据库与接口测试矩阵
 
@@ -91,7 +91,7 @@ pytest 有两条上游兼容性弃用提示（Starlette 的 HTTPX 客户端与 A
 - [召回中心](screenshots/recall.png)
 - [手机](screenshots/recall-390.png)、[平板](screenshots/recall-768.png)
 
-本次自动化浏览器为 Chromium；未声称覆盖 Safari/Firefox 或完整 WCAG 审计。
+自动化浏览器范围为 Chromium，未覆盖 Safari、Firefox 和完整 WCAG 审计。
 
 ## 5. 持久性
 

@@ -2,11 +2,9 @@
 
 日期：2026-09-22。
 
-## 设计依据
+## 视觉方向
 
-按用户指定的 [LobeHub frontend-design 技能](https://lobehub.com/skills/joaquincampo-codex-skills-frontend-design) 优化。该入口返回 403，因此读取作者仓库的 [原始 SKILL.md 历史版本](https://github.com/JoaquinCampo/Skills/blob/00b8bd4edafc81b2db816d0134415f7c8d9be321/frontend-design/SKILL.md)。最新仓库已移除该文件，本次使用上述固定版本，没有安装全局技能。
-
-遵循其“先确定独特且一致的视觉方向，再实现可运行界面”的原则，选择 **精密实验室档案**：暖纸色背景、石墨色侧栏、工程橙强调、宋体中文标题、等宽资产编号与工程网格。
+界面采用 **精密实验室档案** 风格：暖纸色背景、石墨色侧栏、工程橙强调、宋体中文标题、等宽资产编号与工程网格。首页突出资产身份与当前组成，详情页侧重历史记录和部件来源，召回页区分当前影响与历史暴露。
 
 ## 实现
 
@@ -20,9 +18,9 @@
 
 ## 验证
 
-本次 ESLint、TypeScript 与生产构建通过；Vitest **3 passed**；Chromium Playwright **6 passed**，见 [运行日志](frontend-refresh-tests.log)。回归覆盖完整更换/复用/召回故事、登记及重复错误、弹窗键盘操作、历史模式、不可用部件和组成图导航。六种宽度（320、375、390、768、1024、1440px）遍历五页，无页面横向溢出。
+ESLint、TypeScript 与生产构建通过；Vitest **3 passed**；Chromium Playwright **6 passed**，见 [运行日志](frontend-refresh-tests.log)。回归覆盖完整更换/复用/召回故事、登记及重复错误、弹窗键盘操作、历史模式、不可用部件和组成图导航。六种宽度（320、375、390、768、1024、1440px）遍历五页，无页面横向溢出。
 
-已复核桌面与手机实际截图。测试使用独立 PostgreSQL E2E 库，不修改演示库。此次没有重新执行后端 74 项测试；原验收证据见 [测试报告](test-report.md)。浏览器范围为 Chromium，不代表完整 WCAG 或跨浏览器认证。
+已复核桌面与手机实际截图。测试使用独立 PostgreSQL E2E 库，不修改演示库。本轮验证范围为前端；后端 74 项测试的验收证据见 [测试报告](test-report.md)。浏览器范围为 Chromium，不代表完整 WCAG 或跨浏览器认证。
 
 ## 界面截图
 
