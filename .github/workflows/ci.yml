@@ -1,0 +1,35 @@
+name: LifeTrace checks
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: lifetrace
+          POSTGRES_PASSWORD: lifetrace
+          POSTGRES_DB: lifetrace
+        ports: ["54329:5432"]
+        options: --health-cmd "pg_isready -U lifetrace" --health-interval 2s --health-timeout 5s --health-retries 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.13'
+      - run: npm install -g pnpm@10.34.5
+      - run: cd backend && uv sync --frozen
+      - run: cd frontend && pnpm install --frozen-lockfile && pnpm exec playwright install --with-deps chromium
+      - run: bash scripts/verify.sh
+      - run: git diff --exit-code docs/openapi.json frontend/src/api-schema.d.ts
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-evidence
+          path: |
+            frontend/playwright-report
+            frontend/test-results
+            docs/screenshots

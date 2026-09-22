@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: lifetrace
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-lifetrace}
+      POSTGRES_DB: lifetrace
+    ports: ["127.0.0.1:54329:5432"]
+    volumes: ["pgdata:/var/lib/postgresql"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lifetrace"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+  app:
+    build: .
+    ports: ["127.0.0.1:8010:8000"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://lifetrace:${POSTGRES_PASSWORD:-lifetrace}@db:5432/lifetrace
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  pgdata:
